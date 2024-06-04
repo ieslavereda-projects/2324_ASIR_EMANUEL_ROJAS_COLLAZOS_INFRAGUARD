@@ -39,6 +39,6 @@ Wazuh Indexer] -- Docker-Compose
 
 ## Deploys o Scrips
 
--El script de iptables esta en la carpeta single-node se llama rc.local
--EL deploy del SIEM Wazuh esta en la ruta single-nodde se llama docker-compose
+- El script de iptables esta en la carpeta single-node se llama rc.local
+- EL deploy del SIEM Wazuh esta en la ruta single-nodde se llama docker-compose
 
