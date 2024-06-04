@@ -7,6 +7,7 @@ Este proyecto tiene como objetivo desarrollar e implementar una herramienta de m
 - [Descripción](#descripción)
 - [Arquitectura](#arquitectura)
 - [Requisitos](#requisitos)
+- [Deploys o Scrips](#Deploys_o_Scrips)
 
 ## Descripción
 
@@ -35,4 +36,9 @@ Wazuh Indexer] -- Docker-Compose
 - Docker y Docker-Compose instalados.
 - Sistema operativo Linux (preferiblemente Ubuntu).
 - Conexión a Internet para descargar las imágenes de Docker y actualizaciones.
+
+## Deploys o Scrips
+
+-El script de iptables esta en la carpeta single-node se llama rc.local
+-EL deploy del SIEM Wazuh esta en la ruta single-nodde se llama docker-compose
 
