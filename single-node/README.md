@@ -1,24 +1,28 @@
-# Deploy Wazuh Docker in single node configuration
+# Implemente Wazuh Docker en una configuración de un solo nodo
 
-This deployment is defined in the `docker-compose.yml` file with one Wazuh manager containers, one Wazuh indexer containers, and one Wazuh dashboard container. It can be deployed by following these steps: 
+Esta implementación se define en el archivo `docker-compose.yml` con un contenedor de administrador de Wazuh, un contenedor de indexador de Wazuh y un contenedor de panel de Wazuh. Se puede implementar siguiendo estos pasos:
 
-1) Increase max_map_count on your host (Linux). This command must be run with root permissions:
+1) Aumente max_map_count en su host (Linux). Este comando debe ejecutarse con permisos de root:
 ```
 $ sysctl -w vm.max_map_count=262144
 ```
-2) Run the certificate creation script:
+2) Ejecute el script de creación del certificado:
 ```
 $ docker-compose -f generate-indexer-certs.yml run --rm generator
 ```
-3) Start the environment with docker-compose:
+3) Inicie el entorno con Docker-compose:
 
-- In the foregroud:
+- En primer plano:
 ```
 $ docker-compose up
 ```
-- In the background:
+- En segundo Plano:
 ```
 $ docker-compose up -d
 ```
+- Para parar la ejecucion:
+```
+$ docker-compose down
+```
 
-The environment takes about 1 minute to get up (depending on your Docker host) for the first time since Wazuh Indexer must be started for the first time and the indexes and index patterns must be generated.
+El entorno tarda aproximadamente 1 minuto en activarse (dependiendo de su host Docker) por primera vez, ya que se debe iniciar Wazuh Indexer por primera vez y se deben generar los índices y patrones de índice.
